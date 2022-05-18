@@ -23,3 +23,5 @@ yarn test:unit
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 # pokemon_game
+
+##lesson 7 finished, vue course from Udemy with Fernando Herrera
