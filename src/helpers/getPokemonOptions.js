@@ -10,7 +10,7 @@ const getPokemonOptions = async() => {
     const mixedPokemons = getPokemons().sort( () => Math.random() - 0.5)
     
     const pokemons = await getPokemonNames(mixedPokemons.splice(0,4))
-
+    console.table(pokemons);
     return pokemons
 }
 
