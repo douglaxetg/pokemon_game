@@ -2,7 +2,7 @@
   <h1>Who is this Pokemon?</h1>
   <!-- TODO: img -->
   <PokemonPicture :pokemonId="4" :showPokemon="true" />
-  <PokemonOptions />
+  <PokemonOptions :pokemons="pokemonArr" />
   <!-- TODO: options -->
 </template>
 
@@ -15,6 +15,20 @@ getPokemonOptions();
 
 export default {
   components: { PokemonPicture, PokemonOptions },
+  data() {
+    return {
+      pokemonArr: [],
+    };
+  },
+  methods: {
+    async mixPokemonArray() {
+      this.pokemonArr = await getPokemonOptions();
+      //console.log(this.pokemonArr);
+    },
+  },
+  mounted() {
+    this.mixPokemonArray();
+  },
 };
 </script>
 
